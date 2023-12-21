@@ -1,0 +1,33 @@
+sequenceDiagram
+    participant navegador
+    participant servidor
+
+    Note right of navegador: Previamente se cargó la página siguiendo una secuencia como la del ejemplo.
+    Note right of navegador: Un controlador de eventos espera a que se envíe el formulario...
+
+    navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    
+    activate servidor
+    servidor-->>navegador: HTTP 302: Redirección de URL
+    deactivate servidor
+
+    Note right of navegador: Responde el Servidor al Navegador con instrucciones de volver a cargar la página y obtener los archivos main.css, main.js y data.json
+
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate servidor
+    servidor-->>navegador: archivo css
+    deactivate servidor
+
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    activate servidor
+    servidor-->>navegador: archivo JavaScript
+    deactivate servidor
+
+    Note right of navegador: EL navegador comienza a ejecturar el código de JavaScript que recupera el archivo JSON del servidor
+
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate servidor
+    servidor-->>navegador: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    deactivate servidor
+
+    Note right of navegador: El navegador ejecuta la función de devoluvción de llamada que renderiza las notas
