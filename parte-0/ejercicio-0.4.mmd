@@ -12,7 +12,8 @@ sequenceDiagram
     servidor-->>navegador: HTTP 302: Redirección de URL
     deactivate servidor
 
-   Note over navegador,servidor: Responde el Servidor al Navegador con instrucciones de volver a cargar la página y obtener de nuevo los archivos main.css, main.js y data.json. Enviando ahora el arreglo de las notas actualziado a través de data.json
+   Note over navegador,servidor: Responde el Servidor al Navegador con instrucciones de volver a cargar la página y obtener de nuevo los archivos main.css, main.js y data.json.
+Enviando ahora el arreglo de las notas actualziado a través de data.json
 
     navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate servidor
