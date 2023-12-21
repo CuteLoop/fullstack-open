@@ -2,11 +2,11 @@ sequenceDiagram
     participant navegador
     participant servidor
 
-    Note over navegador,servidor: Previamente se cargó la página siguiendo una secuencia para obtener los archivos del servidor<br/> y renderizar las notas.
+    Note over navegador,servidor: Previamente se cargó la página siguiendo una secuencia para <br/> obtener los archivos del servidory renderizar las notas.
     Note over navegador,servidor: Un controlador de eventos espera a que se envíe el formulario...
 
     navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    Note over navegador,servidor: El servidor recibe los datos del formulario, los convierte en un objeto de nota<br/> y los almacena en un arreglo con las notas.
+    Note over navegador,servidor: El servidor recibe los datos del formulario, los convierte <br/> en un objeto de nota y los almacena en un arreglo con las notas.
     
     activate servidor
     servidor-->>navegador: HTTP 302: Redirección de URL
