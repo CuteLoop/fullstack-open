@@ -24,11 +24,11 @@ sequenceDiagram
     servidor-->>navegador: archivo JavaScript
     deactivate servidor
 
-    Note over navegador,servidor: EL navegador comienza a ejecturar el código de JavaScript que recupera el archivo JSON del servidor
+    Note over navegador,servidor: EL navegador comienza a ejecturar el código de JavaScript<br/> que recupera el archivo JSON del servidor
 
     navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate servidor
     servidor-->>navegador: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate servidor
 
-   Note over navegador,servidor: El navegador ejecuta la función de devoluvción de llamada que renderiza las notas
+   Note over navegador,servidor: El navegador ejecuta la función de<br/> devoluvción de llamada que renderiza las notas
