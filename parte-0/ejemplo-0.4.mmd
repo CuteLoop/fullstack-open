@@ -17,11 +17,11 @@ sequenceDiagram
     servidor-->>navegador: archivo JavaScript
     deactivate servidor
 
-    Note right of navegador: The navegador starts executing the JavaScript code that fetches the JSON from the servidor
+    Note right of navegador: EL navegador comienza a ejecturar el código de JavaScript que recupera el archivo JSON del servidor
 
     navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate servidor
     servidor-->>navegador: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate servidor
 
-    Note right of navegador: The navegador executes the callback function that renders the notes
+    Note right of navegador: El navegador ejecuta la función de devoluvción de llamada que renderiza las notas
