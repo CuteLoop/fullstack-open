@@ -2,7 +2,7 @@ sequenceDiagram
     participant navegador
     participant servidor
 
-    Note over navegador,servidor: Previamente se cargó la página siguiendo una secuencia para obtener los archivos del servidor y renderizar las notas.
+    Note over navegador,servidor: Previamente se cargó la página siguiendo una secuencia para obtener los archivos del servidor<br/> y renderizar las notas.
     Note over navegador,servidor: Un controlador de eventos espera a que se envíe el formulario...
 
     navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note
@@ -12,7 +12,7 @@ sequenceDiagram
     servidor-->>navegador: HTTP 302: Redirección de URL
     deactivate servidor
 
-   Note over navegador,servidor: Responde el Servidor al Navegador con instrucciones de volver<br/>a cargar la página y obtener de nuevo los archivos main.css, main.js y data.json. <br/>Enviando ahora el arreglo de las notas actualziado a través de data.json
+   Note over navegador,servidor: Responde el Servidor al Navegador con instrucciones de <br/> cargar la página y obtener los archivos main.css, main.js y data.json. <br/>Enviando ahora el arreglo de las notas actualziado a través de data.json
 
     navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate servidor
