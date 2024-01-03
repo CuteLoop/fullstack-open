@@ -8,12 +8,14 @@ sequenceDiagram
     Note over navegador,servidor: Al enviar el formulario se ejecuta el código de JavaScript
 
     Note over navegador,servidor: El navegador ejecuta elcódigo de JS<br/> el cual agrega una nueva nota y la renderiza <br/> manda un mensaje de POST al servidor.
-    Note over navegador,servidor: Responde el Servidor al Navegador con  de <br/> mensaje: "{message:Note created}"
     navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
     Note over navegador,servidor: El servidor recibe los datos del formulario, los convierte <br/> en un objeto de nota y los almacena en un arreglo con las notas.
     
     activate servidor
     servidor-->>navegador: HTTP 201: created
     deactivate servidor
+
+    Note over navegador,servidor: Responde el Servidor al Navegador con  de <br/> mensaje: "{message:Note created}"
+
 
  
