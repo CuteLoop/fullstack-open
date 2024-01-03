@@ -1,12 +1,9 @@
 
-
-**[solución ejercicio 0.4](../part-0/ejercicio-0.4.mmd) **
-** [solución ejercicio 0.5](../part-0/ejercicio-0.5.mmd) **
-** [solución ejercicio 0.6](../part-0/ejercicio-0.6.mmd) **
-
-
-
-
+<ul>
+    <li>[solución ejercicio 0.4](../part-0/ejercicio-0.4.mmd)/li>
+    <li>[solución ejercicio 0.5](../part-0/ejercicio-0.5.mmd)/li>
+    <li>[solución ejercicio 0.6](../part-0/ejercicio-0.6.mmd)</li>
+</ul>
 
 
 ## Instrucciones para la tarea de la parte 0 
