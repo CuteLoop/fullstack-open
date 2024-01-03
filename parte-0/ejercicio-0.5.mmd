@@ -2,7 +2,7 @@ sequenceDiagram
     participant navegador
     participant servidor
 
-    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate servidor
     servidor-->>navegador: documento HTML
     deactivate servidor
@@ -12,7 +12,7 @@ sequenceDiagram
     servidor-->>navegador: archivo css
     deactivate servidor
 
-    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
     activate servidor
     servidor-->>navegador: archivo JavaScript
     deactivate servidor
