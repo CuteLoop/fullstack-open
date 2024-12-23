@@ -1,3 +1,5 @@
+// Ejemplo de objetos en JavaScript
+
 const object1 = {
     name: 'Arto Hellas',
     age: 35,

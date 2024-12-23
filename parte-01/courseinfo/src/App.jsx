@@ -1,61 +1,55 @@
 const App = () => {
   const course = 'Half Stack application development'
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
+  const parts = [
+    {
+      name: 'Fundamentals of React',
+      exercises: 10
+    },
+    {
+      name: 'Using props to pass data',
+      exercises: 7
+    },
+    {
+      name: 'State of a component',
+      exercises: 14
+    }
+  ]
 
 const Header = (props) => {
+    //console.log(props)
     return (
       <h1>{props.course}</h1>
     )
   }
 
-
-
-
-  const Total = (props) => {
-    return (
-      <p>Number of exercises {props.exercises[0] + props.exercises[1] + props.exercises[2]}</p>
-    )
-  }
-
-  const Part = (props) => {
-    return (
-      <p>
-        {props.part} {props.exercises}
-      </p>
-    )
-  } 
-
-  const Content = (props) => {
+const Content = (props) => {
+    //console.log(props)
     return (
       <div>
-        <Part part={props.parts[0]} exercises={props.exercises[0]} />
-        <Part part={props.parts[1]} exercises={props.exercises[1]} />
-        <Part part={props.parts[2]} exercises={props.exercises[2]} />
+        <p> {props.part.name} {props.part.exercises} </p>
+        
       </div>
     )
   }
 
-  //return (
-  //  <div>
-  //    <Header course={course} />
-  //    <Content ... />
-  //    <Total ... />
-  //  </div>
-  //
-  
+
+const Total = (props) => {
+    //console.log(props)
+    return (
+      <p>Number of exercises {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}</p>
+    )
+  }
 
   return (
     <div>
       <Header course={course} />
+      <Content part={parts} />
+      <Content part={parts} />
+      <Content part={parts} />
+      <Total parts={[parts]} />
 
-      <Content parts = {[part1, part2, part3]} exercises = {[exercises1, exercises2, exercises3]} />
-      
-      <Total exercises = {[exercises1, exercises2, exercises3]} />
+
+
     </div>
   )
 }

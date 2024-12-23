@@ -1,3 +1,5 @@
+// Solución al ejercicio 1.1 y 1.2 course information
+
 const App = () => {
   
   const course = {
